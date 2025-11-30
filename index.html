@@ -685,7 +685,7 @@
       font-size: 16px;
     }
 
-    /* Table Number Input */
+    /* Table Number Input - Updated to Full Name */
     .table-number-section {
       margin-bottom: 20px;
       padding: 16px;
@@ -910,10 +910,10 @@
         <button class="close-cart" id="closeCart">&times;</button>
       </div>
       
-      <!-- Table Number Input Section -->
+      <!-- Table Number Input Section - Updated to Full Name -->
       <div class="table-number-section">
-        <label for="tableNumber" class="table-number-label">Enter Table Number</label>
-        <input type="text" id="tableNumber" class="table-number-input" placeholder="e.g., Table 5" />
+        <label for="tableNumber" class="table-number-label">Enter Your Full Name</label>
+        <input type="text" id="tableNumber" class="table-number-input" placeholder="e.g., John Smith" />
       </div>
       
       <div class="cart-items" id="cartItems">
@@ -1287,13 +1287,13 @@
         return;
       }
       
-      const tableNumber = tableNumberInput.value.trim();
-      if (!tableNumber) {
-        alert('Please enter your table number');
+      const fullName = tableNumberInput.value.trim();
+      if (!fullName) {
+        alert('Please enter your full name');
         return;
       }
       
-      let message = `Hello! I would like to place an order from Table: ${tableNumber}:\n\n`;
+      let message = `Hello! I would like to place an order from: ${fullName}:\n\n`;
       
       cart.forEach(item => {
         message += `${item.name} - ${item.quantity} x ${item.price}\n`;
@@ -1391,30 +1391,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
